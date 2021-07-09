@@ -79,7 +79,7 @@ export default function MainCard() {
                 <img src={imageUrl} alt="" className="h-96 w-full object-cover object-center rounded-2xl" />
             </div>
             <div className="flex-1 flex flex-col justify-evenly">
-                <p className="text-center font-semibold text-2xl text-black my-2 colsp">{title}</p>
+                <p className="text-center font-bold text-6xl text-black my-2 colsp">{title}</p>
                 <StatisticsCount />
             </div>
         </div>

@@ -7,17 +7,12 @@ import SecondCard from '../../components/MainCard/SecondCard'
 export default function Artist({ a }: { a: string }) {
     return (
         <Layout>
-            <div className="grid grid-cols-12 min-h-screen  text-white bg-primary p-6">
-                <div className="col-span-6  grid grid-rows-6 gap-4">
-                    <div className="row-span-4 bg-permissiontoDance rounded-2xl shadow-2xl">
-                        <MainCard />
-                    </div>
-                    <div className="row-span-2 bg-butter rounded-2xl shadow-2xl">
-                        <SecondCard />
-                    </div>
+            <div className="grid grid-cols-12 grid-rows-6 gap-4 min-h-screen  text-white bg-primary p-6">
+                <div className="col-span-6 bg-permissiontoDance rounded-2xl shadow-2xl">
+                    <MainCard />
                 </div>
-                <div className="col-span-6 ">
-
+                <div className="col-span-6 bg-butter rounded-2xl shadow-2xl ">
+                    <SecondCard />
                 </div>
 
             </div>

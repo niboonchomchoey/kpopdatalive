@@ -37,18 +37,18 @@ const StatisticsCount = () => {
     }, [])
 
     return (
-        <div className="flex flex-col items-center justify-evenly">
+        <div className="flex justify-evenly">
             <div className="flex gap-2 items-center">
-                <div className="h-8 w-8">
+                <div className="h-12 w-12">
                     <LikeSvg />
                 </div>
-                <p className="text-4xl  font-medium">{likeCount.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+                <p className="text-6xl  font-medium">{likeCount.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
             </div>
             <div className="flex gap-2 items-center">
-                <div className="h-8 w-8">
+                <div className="h-12 w-12 ">
                     <ViewSvg />
                 </div>
-                <p className="text-4xl font-medium">{viewCount.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+                <p className="text-6xl font-medium">{viewCount.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
             </div>
         </div>
     )
@@ -74,11 +74,13 @@ export default function MainCard() {
         fetchThumbnail()
     }, [])
     return (
-        <div className="h-full flex items-center gap-2 text-black px-2 ">
-            <img src={imageUrl} alt="" className="h-64  object-cover object-center rounded-2xl" />
+        <div className="h-full flex flex-col  gap-2 text-black">
+            <div className="p-2">
+                <img src={imageUrl} alt="" className="h-96 w-full object-cover object-center rounded-2xl" />
+            </div>
             <div className="flex-1 flex flex-col justify-evenly">
+                <p className="text-center font-bold text-6xl text-black my-2 colsp">{title}</p>
                 <StatisticsCount />
-                <p className="text-center font-semibold text-2xl text-black my-2 colsp">{title}</p>
             </div>
         </div>
     )
